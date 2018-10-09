@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="MavenJax" version="3.1">
+  <display-name>AsMaven2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+    <listener>
+        <listener-class>
+                com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+        </listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>machinestatus</servlet-name>
+        <servlet-class>
+            com.sun.xml.ws.transport.http.servlet.WSServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>machinestatus</servlet-name>
+        <url-pattern>/machinestatus</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>componentmanager</servlet-name>
+        <servlet-class>
+            com.sun.xml.ws.transport.http.servlet.WSServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>componentmanager</servlet-name>
+        <url-pattern>/componentmanager</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>staticparam</servlet-name>
+        <servlet-class>
+            com.sun.xml.ws.transport.http.servlet.WSServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>staticparam</servlet-name>
+        <url-pattern>/staticparam</url-pattern>
+    </servlet-mapping>
+    
+      <servlet>
+        <servlet-name>dynamicParam</servlet-name>
+        <servlet-class>
+            com.sun.xml.ws.transport.http.servlet.WSServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dynamicParam</servlet-name>
+        <url-pattern>/dynamicParam</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>120</session-timeout>
+    </session-config>
+</web-app>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints
+  xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+  version="2.0">
+ 	 <endpoint
+      name="machinestatus"
+      implementation="com.AS1.msmimpl.MachineStatusModelImpl"
+      url-pattern="/machinestatus"/>
+      <endpoint
+      name="componentmanager"
+      implementation="com.AS1.componentmanager.ComponentManager"
+      url-pattern="/componentmanager"/>
+      <endpoint
+      name="staticparam"
+      implementation="com.AS1.staticparam.StaticParamModel"
+      url-pattern="/staticparam"/>
+      <endpoint
+      name="dynamicParam"
+      implementation="com.AS1.dynamicParamImpl.DynamicParamImpl"
+      url-pattern="/dynamicParam"/>
+</endpoints>
